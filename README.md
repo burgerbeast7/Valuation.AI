@@ -187,4 +187,7 @@ You can deploy the backend using the Dockerfile directly.
 ---
 
 ## ✍️ Author Information
-- **Developer:** Kunal (burgerbeast7)
+- **Author:** [Kunal Chauhan](https://www.linkedin.com/in/kunal-chauhan-7a7539287/)
+- **GitHub:** [@burgerbeast7](https://github.com/burgerbeast7)
+- **LinkedIn:** [Kunal Chauhan](https://www.linkedin.com/in/kunal-chauhan-7a7539287/)
+- **Live Demo:** [Valuation.AI](https://burgerbeast7.github.io/Valuation.AI/)

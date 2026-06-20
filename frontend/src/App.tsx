@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { Hero } from './components/Hero';
 import { Dashboard } from './pages/Dashboard';
 import { Analytics } from './pages/Analytics';
-import { Layout, BarChart3, Calculator, Home, Github, ShieldAlert } from 'lucide-react';
+import { Layout, BarChart3, Calculator, Home, Github, Linkedin, ShieldAlert } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Instantiate single React Query client
@@ -50,15 +50,23 @@ const App: React.FC = () => {
               </nav>
             )}
 
-            {/* GitHub/Info Monogram */}
-            <div className="flex items-center gap-4">
+            {/* GitHub & LinkedIn Socials */}
+            <div className="flex items-center gap-3.5">
               <a
-                href="https://github.com"
+                href="https://github.com/burgerbeast7"
                 target="_blank"
                 rel="noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
               >
-                <Github size={18} />
+                <Github size={17} />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kunal-chauhan-7a7539287/"
+                target="_blank"
+                rel="noreferrer"
+                className="text-slate-400 hover:text-white transition-colors"
+              >
+                <Linkedin size={17} />
               </a>
               {currentPage === 'hero' && (
                 <button
@@ -99,7 +107,7 @@ const App: React.FC = () => {
         {/* Footer info bar */}
         <footer className="border-t border-brand-border bg-slate-950/40 py-8 text-center text-xs text-slate-500 font-mono select-none">
           <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
-            <p>© {new Date().getFullYear()} Valuation.AI by Kunal. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Valuation.AI by <a href="https://www.linkedin.com/in/kunal-chauhan-7a7539287/" target="_blank" rel="noreferrer" className="underline hover:text-white transition-colors">Kunal Chauhan</a>. All Rights Reserved.</p>
             <p className="flex justify-center items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-brand-teal" /> Ordinary Least Squares Model Active
             </p>
