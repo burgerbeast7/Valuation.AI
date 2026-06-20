@@ -36,8 +36,7 @@ jobs:
           cd frontend
           npm run build
         env:
-          # Injects the Render backend URL during build so the deployed static site knows where to fetch prices
-          VITE_API_URL: https://valuation-ai-backend.onrender.com/api
+          VITE_API_URL: ${{ vars.VITE_API_URL || 'https://valuation-ai-backend.onrender.com/api' }}
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
