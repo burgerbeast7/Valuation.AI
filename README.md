@@ -102,6 +102,36 @@ Verify that Docker and Docker Compose are installed on your machine.
 
 ---
 
+## 🌐 Production Deployment
+
+### 1. Frontend Deployment (Vercel)
+Vercel handles React SPA monorepos cleanly.
+1. Go to your **Vercel Dashboard** and click **Add New** → **Project**.
+2. Import the Git repository: `https://github.com/burgerbeast7/Valuation.AI.git`.
+3. In the project settings, configure:
+   - **Root Directory:** `frontend`
+   - **Framework Preset:** `Vite` (auto-detected)
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+4. Under **Environment Variables**, add:
+   - **Key:** `VITE_API_URL`
+   - **Value:** `https://valuation-ai-backend.onrender.com/api` (replace with your active Render backend service API endpoint)
+5. Click **Deploy**.
+
+### 2. Backend Deployment (Render)
+You can deploy the backend using the Dockerfile directly.
+1. Go to your **Render Dashboard** and click **New** → **Web Service**.
+2. Connect your Git repository.
+3. In the settings, configure:
+   - **Runtime:** `Docker`
+   - **Docker Command:** (Leave blank to use Dockerfile default)
+4. Under **Advanced Settings**, configure:
+   - **Docker Build Context:** `backend`
+   - **Dockerfile Path:** `Dockerfile`
+5. Render will automatically build the backend image and expose it.
+
+---
+
 ## 📖 API Documentation
 
 ### 1. Model Prediction Endpoint
