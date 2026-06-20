@@ -55,7 +55,7 @@ export const Analytics: React.FC = () => {
 
   return (
     <motion.div 
-      variants={FADE_IN}
+      variants={FADE_IN as any}
       initial="initial"
       animate="animate"
       className="space-y-10 select-none pb-16"
@@ -203,7 +203,7 @@ export const Analytics: React.FC = () => {
                 />
                 <Scatter name="Validation Test Sets" data={charts.actual_vs_predicted} fill="rgba(99, 102, 241, 0.75)" />
                 {/* 45-degree reference line representing perfect prediction */}
-                <ReferenceLine segment={{ x: 50000, y: 50000 }, { x: 500000, y: 500000 }} stroke="rgba(255, 255, 255, 0.25)" strokeDasharray="5 5" />
+                <ReferenceLine segment={[{ x: 50000, y: 50000 }, { x: 500000, y: 500000 }]} stroke="rgba(255, 255, 255, 0.25)" strokeDasharray="5 5" />
               </ScatterChart>
             </ResponsiveContainer>
           )}

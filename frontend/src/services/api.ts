@@ -4,7 +4,7 @@ import axios from 'axios';
 // Base URL points to relative path /api which is proxied in development,
 // and served directly or via proxy in production container setups.
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api',
+  baseURL: (import.meta as any).env.VITE_API_URL || '/api',
   headers: {
     'Content-Type': 'application/json',
   },

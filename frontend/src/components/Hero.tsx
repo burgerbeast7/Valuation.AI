@@ -55,10 +55,10 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
         {/* Category Chip */}
         <motion.div 
-          variants={FADE_IN}
+          variants={FADE_IN as any}
           initial="initial"
           animate="animate"
-          transition={{ ...FADE_IN.transition, delay: 0.1 }}
+          transition={{ ...(FADE_IN as any).transition, delay: 0.1 }}
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full glass-card text-xs font-semibold tracking-wider text-brand-indigo uppercase mb-8 shadow-glass"
         >
           <span className="w-2 h-2 rounded-full bg-brand-indigo animate-pulse" />
@@ -67,10 +67,10 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
 
         {/* Title */}
         <motion.h1 
-          variants={FADE_IN}
+          variants={FADE_IN as any}
           initial="initial"
           animate="animate"
-          transition={{ ...FADE_IN.transition, delay: 0.2 }}
+          transition={{ ...(FADE_IN as any).transition, delay: 0.2 }}
           className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight font-outfit text-white mb-6 leading-[1.1] max-w-4xl"
         >
           California Housing <br />
@@ -81,10 +81,10 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
 
         {/* Subtitle */}
         <motion.p 
-          variants={FADE_IN}
+          variants={FADE_IN as any}
           initial="initial"
           animate="animate"
-          transition={{ ...FADE_IN.transition, delay: 0.3 }}
+          transition={{ ...(FADE_IN as any).transition, delay: 0.3 }}
           className="text-lg md:text-xl font-normal font-inter text-slate-400 mb-10 max-w-3xl leading-relaxed"
         >
           Explore how machine learning estimates housing values using demographic and geographic characteristics derived from California census districts.
@@ -92,10 +92,10 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
 
         {/* Call to Action Button */}
         <motion.div
-          variants={FADE_IN}
+          variants={FADE_IN as any}
           initial="initial"
           animate="animate"
-          transition={{ ...FADE_IN.transition, delay: 0.4 }}
+          transition={{ ...(FADE_IN as any).transition, delay: 0.4 }}
           className="mb-16"
         >
           <button
@@ -112,10 +112,10 @@ export const Hero: React.FC<HeroProps> = ({ onStart }) => {
 
         {/* Mini Features List */}
         <motion.div
-          variants={FADE_IN}
+          variants={FADE_IN as any}
           initial="initial"
           animate="animate"
-          transition={{ ...FADE_IN.transition, delay: 0.5 }}
+          transition={{ ...(FADE_IN as any).transition, delay: 0.5 }}
           className="grid grid-cols-1 sm:grid-cols-3 gap-6 w-full max-w-4xl border-t border-brand-border pt-12"
         >
           <div className="flex flex-col items-center sm:items-start text-center sm:text-left gap-3 px-4">

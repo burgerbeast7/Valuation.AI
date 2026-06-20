@@ -45,7 +45,7 @@ export const Dashboard: React.FC = () => {
     if (!currentInput) return;
     try {
       const response = await api.post(`/export/${type}`, currentInput, { responseType: 'blob' });
-      const blob = new Blob([response.data], { type: response.headers['content-type'] });
+      const blob = new Blob([response.data], { type: response.headers['content-type'] as string });
       const url = window.URL.createObjectURL(blob);
       const link = document.createElement('a');
       link.href = url;
@@ -86,7 +86,7 @@ export const Dashboard: React.FC = () => {
 
   return (
     <motion.div 
-      variants={FADE_IN}
+      variants={FADE_IN as any}
       initial="initial"
       animate="animate"
       className="space-y-12 select-none pb-20"
