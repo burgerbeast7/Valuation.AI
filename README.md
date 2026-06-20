@@ -151,3 +151,8 @@ Verify that Docker and Docker Compose are installed on your machine.
 - **Alternative Estimators:** Incorporate ensemble gradient-boosted trees (e.g. LightGBM, XGBoost) to model geo-contour non-linearities.
 - **Inflation adjustment indexing:** Re-weight features using modern consumer price indices (CPI) to reflect current inflation rates.
 - **Dynamic geographical layers:** Integrate Mapbox or Deck.gl layers mapping coordinate parameters to actual street boundary values.
+
+---
+
+## ✍️ Author Information
+- **Developer:** Kunal (burgerbeast7)

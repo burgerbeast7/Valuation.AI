@@ -99,7 +99,7 @@ const App: React.FC = () => {
         {/* Footer info bar */}
         <footer className="border-t border-brand-border bg-slate-950/40 py-8 text-center text-xs text-slate-500 font-mono select-none">
           <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
-            <p>© {new Date().getFullYear()} Valuation.AI. Developed for Technical Portfolio Demonstration.</p>
+            <p>© {new Date().getFullYear()} Valuation.AI by Kunal. All Rights Reserved.</p>
             <p className="flex justify-center items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-brand-teal" /> Ordinary Least Squares Model Active
             </p>
