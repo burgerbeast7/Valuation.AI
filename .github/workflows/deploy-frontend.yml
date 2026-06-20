@@ -1,0 +1,47 @@
+name: Deploy React Frontend to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    # Only run when files inside frontend directory or this workflow itself change
+    paths:
+      - 'frontend/**'
+      - '.github/workflows/deploy-frontend.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      - name: Install Dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Build Application
+        run: |
+          cd frontend
+          npm run build
+        env:
+          # Injects the Render backend URL during build so the deployed static site knows where to fetch prices
+          VITE_API_URL: https://valuation-ai-backend.onrender.com/api
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./frontend/dist
+          publish_branch: gh-pages
