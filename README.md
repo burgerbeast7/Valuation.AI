@@ -2,6 +2,8 @@
 
 An institutional-grade real estate valuation platform leveraging Multiple Linear Regression to estimate census district housing values. Built with a production-grade full-stack architecture matching standard industry patterns.
 
+🚀 **Live Demo:** [https://burgerbeast7.github.io/Valuation.AI/](https://burgerbeast7.github.io/Valuation.AI/)
+
 ---
 
 ## ⚡ Overview
